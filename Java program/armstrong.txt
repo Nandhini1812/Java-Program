@@ -1,0 +1,21 @@
+public class Armstrong {
+    void Main() {
+        int a = 153;
+        int sum = 0;
+        int temp = a;
+        while (temp > 0) {
+            int rem = temp % 10;
+            sum = sum + (rem * rem * rem);
+            temp = temp / 10;
+        }
+        if (sum == a) {
+            System.out.println("Yes Armstrong");
+        } else {
+            System.out.println("Not Armstrong");
+        }
+    }
+    public static void main(String args[]) {
+        Armstrong obj = new Armstrong();
+        obj.Main();
+    }
+}
