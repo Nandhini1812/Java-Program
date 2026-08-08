@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine()+" ";
+        reverseVow(s);
+    }
+    static void reverseVow(String s){
+       String vowel = "";
+       for(int i=0;i<s.length();i++){
+           if(vowel(s.charAt(i))){
+               vowel = vowel + s.charAt(i);
+           }
+       }
+       int j = vowel.length()-1;
+       for(int i=0;i<s.length();i++){
+           if(vowel(s.charAt(i))){
+               System.out.print(vowel.charAt(i));
+               j--;
+           }
+           else{
+               System.out.print(s.charAt(i));
+           }
+       }
+    }
+    static boolean vowel(char c){
+        return (c=='A' || c=='E' || c=='I' || c=='O' || c=='U' || c=='a' || c=='e' || c=='i' || c=='u' || c=='i');
+    }
+}
